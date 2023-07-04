@@ -143,7 +143,7 @@ class Zomato:
             elif choice == '7':
                 self.review_orders()
             elif choice == '8':
-                self.save_menu('menu.csv')
+                self.save_menu('Sprint_1_Day_4\\PreClass\\menu.csv')
                 break
             else:
                 print("Invalid choice. Please try again.")

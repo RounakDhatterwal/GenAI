@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zomato Chronicles: View Orders</title>
+</head>
+<body>
+    <h1>Orders</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Customer Name</th>
+            <th>Dish(es)</th>
+            <th>Status</th>
+        </tr>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.id }}</td>
+            <td>{{ order.customer_name }}</td>
+            <td>
+                {% for dish_id in order.dish_ids %}
+                {{ dish_id }}
+                {% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </td>
+            <td>{{ order.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Back to Menu</a>
+</body>
+</html>
